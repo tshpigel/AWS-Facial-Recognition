@@ -4,6 +4,7 @@ const e = document.querySelector("#res #elip");
 const cool = document.querySelector("#res #an");
 const pe = document.querySelector("#pe");
 
+// website is not currently running
 const AWSURL = 'https://ja5hc6egg5xnye36qt6zhvkbza0kdqkq.lambda-url.us-east-1.on.aws/';
 
 const video = document.querySelector("video");
@@ -17,8 +18,6 @@ navigator.mediaDevices.getUserMedia({
 let inr = true;
 
 document.body.addEventListener("keydown", async evt => {
-    // if(evt.key === ' ' && !inr) document.querySelector('#err').style.display = 'inline-block';
-
     if(evt.key === ' ' && inr) {
         const v = document.querySelector("video");
         const tw = v.videoWidth;
@@ -56,8 +55,7 @@ document.body.addEventListener("keydown", async evt => {
                 const text = await data.text();
 
                 console.log(text);
-                // const dname = text.slice(10, -4);
-        
+                
                 clearInterval(s);
                 e.textContent = '';
                 pe.textContent = 'Press \'Space\' to Analyze Face';
